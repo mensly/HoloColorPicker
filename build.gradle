@@ -4,13 +4,13 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.7.+'
+        classpath 'com.android.tools.build:gradle:0.12.+'
     }
 }
 
-def isReleaseBuild() {
-    return version.contains("SNAPSHOT") == false
-}
+//def isReleaseBuild() {
+//    return version.contains("SNAPSHOT") == false
+//}
 
 allprojects {
     version = VERSION_NAME
@@ -21,10 +21,10 @@ allprojects {
     }
 }
 
-apply plugin: 'android-library'
+apply plugin: 'com.android.library'
 android {
-	compileSdkVersion 16
-	buildToolsVersion "18.1.1"
+	compileSdkVersion 20
+	buildToolsVersion "20.0.0"
 
     sourceSets {
         main {
@@ -36,4 +36,4 @@ android {
 }
 
 
-apply from: 'maven_push.gradle'
+//apply from: 'maven_push.gradle'
